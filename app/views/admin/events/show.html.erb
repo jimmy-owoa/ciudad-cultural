@@ -10,5 +10,9 @@
   <%= @admin_event.description %>
 </p>
 
+<% @admin_event.images.each do |image| %>
+  <%= image_tag image, size: "300x300" %>
+<% end %><br/>
+
 <%= link_to 'Edit', edit_admin_event_path(@admin_event) %> |
 <%= link_to 'Back', admin_events_path %>
