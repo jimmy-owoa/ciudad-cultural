@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Admin Members</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Lastname</th>
+      <th>Email</th>
+      <th>Summary</th>
+      <th>Phone</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @admin_members.each do |admin_member| %>
+      <tr>
+        <td><%= admin_member.name %></td>
+        <td><%= admin_member.lastname %></td>
+        <td><%= admin_member.email %></td>
+        <td><%= admin_member.summary %></td>
+        <td><%= admin_member.phone %></td>
+        <td><%= link_to 'Show', admin_member %></td>
+        <td><%= link_to 'Edit', edit_admin_member_path(admin_member) %></td>
+        <td><%= link_to 'Destroy', admin_member, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Admin Member', new_admin_member_path %>

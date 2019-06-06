@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @admin_member.name %>
+</p>
+
+<p>
+  <strong>Lastname:</strong>
+  <%= @admin_member.lastname %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @admin_member.email %>
+</p>
+
+<p>
+  <strong>Summary:</strong>
+  <%= @admin_member.summary %>
+</p>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @admin_member.phone %>
+</p>
+
+<p>
+  <%= image_tag @admin_member.picture %>
+</p>
+
+<%= link_to 'Edit', edit_admin_member_path(@admin_member) %> |
+<%= link_to 'Back', admin_members_path %>
