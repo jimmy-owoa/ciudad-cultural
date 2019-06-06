@@ -2,7 +2,7 @@
 
 <h1>Admin Events</h1>
 <%= react_component("HelloWorld", { greeting: "Hello from react-rails." }) %>
-
+<%= react_component("List", { events: @admin_events})%>
 <table>
   <thead>
     <tr>
